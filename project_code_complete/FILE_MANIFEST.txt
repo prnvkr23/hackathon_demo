@@ -1,0 +1,219 @@
+================================================================================
+SMART COMPLAINT PORTAL - COMPLETE CODE FILE MANIFEST
+================================================================================
+
+Location: /app/project_code_complete/
+
+This folder contains ALL the code files needed for the Smart Complaint Portal.
+Copy this entire folder to use the complete project.
+
+================================================================================
+DOCUMENTATION FILES
+================================================================================
+
+✓ README.md                     - Complete project documentation & setup guide
+✓ PROJECT_STRUCTURE.md          - Detailed file structure & architecture
+✓ FILE_MANIFEST.txt             - This file - complete file listing
+
+================================================================================
+BACKEND FILES (Python/FastAPI)
+================================================================================
+
+Directory: backend/
+
+✓ server.py                     - Main FastAPI application (545 lines)
+                                  Contains:
+                                  - Authentication (JWT, bcrypt)
+                                  - Complaint CRUD operations
+                                  - AI analysis integration (Gemini 3 Flash)
+                                  - Analytics endpoints
+                                  - Duplicate detection
+                                  - MongoDB integration
+
+✓ requirements.txt              - Python dependencies
+                                  fastapi, motor, pyjwt, bcrypt, passlib
+                                  emergentintegrations, uvicorn
+
+✓ .env.example                  - Environment variables template
+                                  MONGO_URL, DB_NAME, CORS_ORIGINS
+                                  EMERGENT_LLM_KEY, JWT_SECRET
+
+================================================================================
+FRONTEND FILES (React)
+================================================================================
+
+Directory: frontend/
+
+ROOT CONFIGURATION FILES:
+✓ package.json                  - Node.js dependencies & scripts
+✓ tailwind.config.js            - Tailwind CSS configuration
+✓ .env.example                  - Frontend environment variables
+
+SOURCE FILES (src/):
+
+MAIN APP FILES:
+✓ src/App.js                    - Main application with routing (95 lines)
+✓ src/App.css                   - Global app styles
+✓ src/index.css                 - Tailwind CSS & global styles (87 lines)
+
+COMPONENTS:
+✓ src/components/Sidebar.js     - Navigation sidebar & layout (140 lines)
+                                  - Fixed sidebar (desktop)
+                                  - Drawer sidebar (mobile)
+                                  - User profile
+                                  - Navigation links
+                                  - Logout button
+
+CONTEXTS:
+✓ src/contexts/AuthContext.js   - Authentication context & hooks (60 lines)
+                                  - Login/register functions
+                                  - Token management
+                                  - User state
+                                  - Protected route logic
+
+PAGES:
+✓ src/pages/LoginPage.js        - Login/Register page (170 lines)
+                                  - Split-screen design
+                                  - Tab switching (Login/Register)
+                                  - Form validation
+                                  - Error handling
+
+✓ src/pages/StudentDashboard.js - Student portal (280 lines)
+                                  - Stats cards
+                                  - Complaint submission form
+                                  - Complaint history
+                                  - Status badges
+                                  - AI summary display
+
+✓ src/pages/AdminDashboard.js   - Admin portal (310 lines)
+                                  - Analytics dashboard
+                                  - All complaints table
+                                  - Status management
+                                  - Charts (Bar & Pie)
+                                  - Real-time updates
+
+UTILITIES:
+✓ src/lib/utils.js              - Utility functions (7 lines)
+                                  - cn() class merge helper
+
+================================================================================
+UI COMPONENTS (Pre-installed Shadcn UI)
+================================================================================
+
+Note: The following Shadcn UI components are already installed in the main
+project at /app/frontend/src/components/ui/ and are used by the pages:
+
+- button.jsx
+- input.jsx
+- label.jsx
+- card.jsx
+- badge.jsx
+- textarea.jsx
+- tabs.jsx
+- sonner.jsx
+
+These are NOT copied to project_code_complete folder as they're standard
+Shadcn components. Install them using:
+  npx shadcn-ui@latest add button input label card badge textarea tabs sonner
+
+================================================================================
+FOLDER STRUCTURE
+================================================================================
+
+project_code_complete/
+│
+├── README.md
+├── PROJECT_STRUCTURE.md
+├── FILE_MANIFEST.txt
+│
+├── backend/
+│   ├── server.py
+│   ├── requirements.txt
+│   └── .env.example
+│
+└── frontend/
+    ├── package.json
+    ├── tailwind.config.js
+    ├── .env.example
+    │
+    └── src/
+        ├── App.js
+        ├── App.css
+        ├── index.css
+        │
+        ├── components/
+        │   └── Sidebar.js
+        │
+        ├── contexts/
+        │   └── AuthContext.js
+        │
+        ├── pages/
+        │   ├── LoginPage.js
+        │   ├── StudentDashboard.js
+        │   └── AdminDashboard.js
+        │
+        └── lib/
+            └── utils.js
+
+================================================================================
+TOTAL FILES: 17 code files + 3 documentation files = 20 files
+================================================================================
+
+SETUP INSTRUCTIONS:
+-------------------
+
+1. Copy the entire /app/project_code_complete/ folder to your local machine
+
+2. Backend Setup:
+   cd backend
+   pip install -r requirements.txt
+   cp .env.example .env
+   # Edit .env with your MongoDB URL and secrets
+   uvicorn server:app --host 0.0.0.0 --port 8001 --reload
+
+3. Frontend Setup:
+   cd frontend
+   yarn install
+   # Install Shadcn UI components:
+   npx shadcn-ui@latest add button input label card badge textarea tabs sonner
+   cp .env.example .env
+   # Edit .env with your backend URL
+   yarn start
+
+4. Access the application:
+   Frontend: http://localhost:3000
+   Backend API: http://localhost:8001
+   API Docs: http://localhost:8001/docs
+
+================================================================================
+FEATURES IMPLEMENTED:
+================================================================================
+
+✅ Role-based authentication (Student/Admin)
+✅ AI-powered complaint analysis (Gemini 3 Flash)
+✅ Automatic categorization (Electrical/Cleaning/Internet/Maintenance/Other)
+✅ Priority detection (Low/Medium/High)
+✅ Summary generation
+✅ Status tracking (Pending/In Progress/Resolved)
+✅ Admin dashboard with analytics
+✅ Charts (Bar chart, Pie chart)
+✅ Duplicate complaint detection
+✅ Responsive design (mobile & desktop)
+✅ Modern UI (warm beige & gold aesthetic)
+✅ Toast notifications
+✅ Protected routes
+✅ JWT authentication
+✅ MongoDB integration
+
+================================================================================
+TECH STACK:
+================================================================================
+
+Backend:  FastAPI + MongoDB + Gemini 3 Flash AI
+Frontend: React 19 + Tailwind CSS + Shadcn UI + Recharts
+Auth:     JWT tokens + bcrypt
+Database: MongoDB (Motor async driver)
+
+================================================================================
+END OF FILE MANIFEST
+================================================================================
